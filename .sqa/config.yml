@@ -1,0 +1,74 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/2.0.1
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/demichie/OpenPDAC-12:
+      branch: main
+      repo: https://github.com/demichie/OpenPDAC-12
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/demichie/OpenPDAC-12 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.lousy-aqua-clam.sh
+        container: qc.acc_freaky-rose-tiger
+  QC.Doc:
+    repos:
+      github.com/demichie/OpenPDAC-12 find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.beady-peach-wolfhound.sh
+        container: qc.doc_baggy-white-newfoundland
+      github.com/demichie/OpenPDAC-12 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.frumpy-orange-goose.sh
+        container: qc.doc_pasty-seashell-mongoose
+      github.com/demichie/OpenPDAC-12 markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.breezy-chestnut-termite.sh
+        container: qc.doc_shabby-wheat-scorpion
+  QC.Lic:
+    repos:
+      github.com/demichie/OpenPDAC-12 licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.breezy-fuchsia-kudu.sh
+        container: qc.lic_gloppy-olive-caracal
+  QC.Met:
+    repos:
+      github.com/demichie/OpenPDAC-12 cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.crabby-turquoise-dolphin.sh
+        container: qc.met_hazy-white-goose
+  QC.Sec:
+    repos:
+      github.com/demichie/OpenPDAC-12 bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.clammy-taupe-manatee.sh
+        container: qc.sec_geeky-mustard-labradoodle
+  QC.Sty:
+    repos:
+      github.com/demichie/OpenPDAC-12 flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.silly-azure-opossum.sh
+        container: qc.sty_hilly-myrtle-bonobo
+      github.com/demichie/OpenPDAC-12 hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.gamy-harlequin-goat.sh
+        container: qc.sty_tacky-mauve-cat
+  QC.Uni:
+    repos:
+      github.com/demichie/OpenPDAC-12 pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.wheezy-chartreuse-mau.sh
+        container: qc.uni_foggy-sangria-jackal
+  QC.Ver:
+    repos:
+      github.com/demichie/OpenPDAC-12 get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.ugly-cobalt-meerkat.sh
+        container: qc.ver_dorky-seashell-chipmunk
+timeout: 5400
