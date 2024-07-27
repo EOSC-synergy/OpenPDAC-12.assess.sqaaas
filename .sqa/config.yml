@@ -15,60 +15,60 @@ sqa_criteria:
     repos:
       github.com/demichie/OpenPDAC-12 git:
         commands:
-        - /usr/bin/env sh .sqa/script.lousy-aqua-clam.sh
-        container: qc.acc_freaky-rose-tiger
+        - /usr/bin/env sh .sqa/script.crappy-tomato-cougar.sh
+        container: qc.acc_smelly-lilac-hound
   QC.Doc:
     repos:
       github.com/demichie/OpenPDAC-12 find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-peach-wolfhound.sh
-        container: qc.doc_baggy-white-newfoundland
+        - /usr/bin/env sh .sqa/script.scanty-celadon-quoll.sh
+        container: qc.doc_pretty-grey-rat
       github.com/demichie/OpenPDAC-12 git:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-orange-goose.sh
-        container: qc.doc_pasty-seashell-mongoose
+        - /usr/bin/env sh .sqa/script.dorky-sepia-setter.sh
+        container: qc.doc_cranky-platinum-bonobo
       github.com/demichie/OpenPDAC-12 markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.breezy-chestnut-termite.sh
-        container: qc.doc_shabby-wheat-scorpion
+        - /usr/bin/env sh .sqa/script.slaphappy-cardinal-moose.sh
+        container: qc.doc_pasty-gold-gopher
   QC.Lic:
     repos:
       github.com/demichie/OpenPDAC-12 licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.breezy-fuchsia-kudu.sh
-        container: qc.lic_gloppy-olive-caracal
+        - /usr/bin/env sh .sqa/script.sleepy-apricot-avocet.sh
+        container: qc.lic_shaky-purple-snake
   QC.Met:
     repos:
       github.com/demichie/OpenPDAC-12 cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.crabby-turquoise-dolphin.sh
-        container: qc.met_hazy-white-goose
+        - /usr/bin/env sh .sqa/script.tacky-pink-dog.sh
+        container: qc.met_droopy-pear-termite
   QC.Sec:
     repos:
       github.com/demichie/OpenPDAC-12 bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-taupe-manatee.sh
-        container: qc.sec_geeky-mustard-labradoodle
+        - /usr/bin/env sh .sqa/script.ugly-silver-quoll.sh
+        container: qc.sec_gloppy-sapphire-newfoundland
   QC.Sty:
     repos:
       github.com/demichie/OpenPDAC-12 flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-azure-opossum.sh
-        container: qc.sty_hilly-myrtle-bonobo
+        - /usr/bin/env sh .sqa/script.shabby-goldenrod-javanese.sh
+        container: qc.sty_cloudy-firebrick-llama
       github.com/demichie/OpenPDAC-12 hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-harlequin-goat.sh
-        container: qc.sty_tacky-mauve-cat
+        - /usr/bin/env sh .sqa/script.woolly-white-uakari.sh
+        container: qc.sty_frumpy-chestnut-manatee
   QC.Uni:
     repos:
       github.com/demichie/OpenPDAC-12 pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.wheezy-chartreuse-mau.sh
-        container: qc.uni_foggy-sangria-jackal
+        - /usr/bin/env sh .sqa/script.bumpy-jade-hedgehog.sh
+        container: qc.uni_zippy-crimson-akita
   QC.Ver:
     repos:
       github.com/demichie/OpenPDAC-12 get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-cobalt-meerkat.sh
-        container: qc.ver_dorky-seashell-chipmunk
+        - /usr/bin/env sh .sqa/script.goopy-auburn-mandrill.sh
+        container: qc.ver_randy-cinnamon-spider
 timeout: 5400
